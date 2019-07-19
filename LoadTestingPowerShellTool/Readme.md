@@ -11,6 +11,10 @@ This package includes:
 - This package contains an unsigned PowerShell script. You must first use Set-ExecutionPolicy Unrestricted command in order to allow running of unsigned scripts.
 - This packages requires the Power BI PowerShell modules to be installed. follow [link](https://docs.microsoft.com/en-us/powershell/power-bi/overview?view=powerbi-ps to install modules.
 
+### Video Walk Through
+
+A video walk through is availble [here](https://www.youtube.com/watch?time_continue=1860&v=C6vk6wk9dcw)
+
 ### Description:
 
 - This package is meant for purposeful introduction of report rendering load against a Premium Capacity. 
