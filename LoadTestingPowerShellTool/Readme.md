@@ -1,6 +1,9 @@
 # Power BI Dedicated Capacity Load Assessment Tool
 
-This package includes:  
+#### ChangleLog
+7/23 Fixed missing JSON issue
+
+## This package includes:  
 - **Powershell script** (starting point) - Interactively gets inputs from the user and updates the PBIToken and PBIReport files.
 - **PBIToken** (JS Object File) file which stores Aad access token for the connections to work.
 - **PBIReport** (JS Object File) file which stores report parameters including report url, filter parameters.
