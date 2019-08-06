@@ -16,6 +16,7 @@ For "realistic user scenario" load testing to simulate a realistic set of user a
     - Launching multiple Chrome processes to ensure higher concurrency tests can be run and that 100% CPU on the client machine can be used
     - Display of client-side report refresh average duration metrics
     - Improvement to the PBIReport.JSON format to be more readable
+    - Support for mobile portrait and mobile landscape layouts
 
 ## This package includes:  
 - **Setup_Load_Test.ps1** (starting point) - Interactively prompts for sign into Power BI, lets the user choose the workspace and report to load test, and creates a subfolder or subfolders with the partially configured load test.
@@ -96,6 +97,7 @@ Note this is JavaScript (the file begins with "reportParameters=" because we are
   - _Table and column names:_ Even if a report author has renamed the display name for a column in a visual, use the proper table and column name in the model. The easiest way to determine the name is to edit the report, click the slicer in question and mouse over the field name in the field well in the Visualizations pane. In the screenshot below, SalesTerritoryCountry is the proper column name, not Country. Ignore the single quotes around the table name and the brackets around the column name.
   ![](../doc_images/TableAndColumnName.png)
 - **thinkTimeSeconds** is an integer with the number of seconds to pause before rendering the next bookmark or filter combination. We recommend while setting up a load test you set the think time to 5-10 seconds so you can visually examine the report results between each iteration. But for running a real load test to test 200 users, it is difficult to obtain hardware to spin up 200 Chrome browser windows without maxing out the CPU and distorting test results. So we recommend setting think time to 0 seconds or 1 second and using the "real world users per window" calculation mentioned above.
+- **layoutType** not pictured in the example above is an extra property that allows you to specify you want a specific layout to be rendered: MobilePortrait, MobileLandscape or Master (master is the regular layout). Use the following syntax to specify mobile portrait view, for example: `"layoutType": "MobilePortrait"`
 
 ##### Troubleshooting:
 - After setting up PBIReport.JSON in the report subfolder we recommend manually double clicking the RealisticLoadTest.html in that report subdirectory to test the report. If the report does not load or the load test does not function as expected check the following items:

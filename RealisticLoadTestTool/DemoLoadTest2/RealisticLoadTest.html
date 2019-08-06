@@ -190,6 +190,9 @@
 		var pageName = reportParameters.pageName;
 		pageName = (pageName == undefined ? null : pageName);
 
+		var layoutType = reportParameters.layoutType;
+		layoutType = (layoutType == undefined ? "Master" : layoutType);
+		
 		//var isSlicer = reportParameters.isSlicer;
 		//isSlicer = (isSlicer == undefined ? false : isSlicer);
 
@@ -309,7 +312,9 @@
 
                         filterPaneEnabled: true,
 
-                        navContentPaneEnabled: true                    
+                        navContentPaneEnabled: true,
+						
+                        layoutType: models.LayoutType[layoutType]            
 
                     }
 
