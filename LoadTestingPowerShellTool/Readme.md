@@ -24,6 +24,7 @@ A video walk through is availble [here](https://www.youtube.com/watch?time_conti
 - The tool should be used to assess how many continuose and simultaneouse render requests of certain reports can a Premium capacity handle.
 - The tool is meant to be used in capacity planning and scale evaluation scenarios, when admins of Power BI capacities wish to test the ability of their capacity to serve a certain scale.
 - The main purpose of the tool to generate metrics that are visibile in the [Premium Capacity Metrics app](https://docs.microsoft.com/en-us/power-bi/service-admin-premium-monitor-capacity). Users should anlayze the results of the load run in this app.
+- Cache usage may have a significant impact on the results. You may want to use online monitoring tools like SQL Server Profiler/DAX studio to check if/how the tests reach the underlying tabular model.
 - The tool will prompt users for Power BI credentials to obtain the reports that need to be ran against the capacity
 - Users should pass credentials of workspace admins of the workspace cotaining the report\s to be tested
 - The tool will ask the users how many reports they wish to run in parallel
@@ -31,6 +32,7 @@ A video walk through is availble [here](https://www.youtube.com/watch?time_conti
 - For each report, the tool will ask the user how many browser windows should hit that report simultenously.
 - Once launched, the tool will open new Chrome windows for each instance. i.e. if report 1 had 4 simultenouse renders requested, the tool will open 4 seperat windows of Chrome (not Tabs). report 2 will have its own windows etc. 
 - Users should always keep the Chrome windows open and in the viewport, otherwise the OS managment of the browser client interacting with Power BI will reduce the load the test is generating
+
 
 ##### Notes:
 - By default, Aad access token expires in 60 minutes. Reports will run for 60 minutes once initiated and stop with error once access token expires.
