@@ -60,7 +60,7 @@ function UpdateReportParameters
     $new_ReportJSONFile = ($new_ReportJSONFile -replace $filterColumnRegex,$args[0][1][1])  
     $new_ReportJSONFile = ($new_ReportJSONFile -replace $minValueRegex,$args[0][1][2])
     $new_ReportJSONFile = ($new_ReportJSONFile -replace $maxValueRegex,$args[0][1][3])
-    $new_ReportJSONFile | set-content $(Join-Path $destinationDir 'PBIReport.JSON')
+    $new_ReportJSONFile | set-content -Encoding UTF8 $(Join-Path $destinationDir 'PBIReport.JSON')
 }
 
 #verify if current working directory have master files. If not, prompt user for path of the files.
