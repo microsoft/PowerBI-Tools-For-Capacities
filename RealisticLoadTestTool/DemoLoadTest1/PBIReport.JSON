@@ -1,0 +1,32 @@
+reportParameters={
+	"reportUrl":"https://app.powerbi.com/reportEmbed?reportId=36621bde-4614-40df-8e08-79481d767bcb&groupId=dfbfe8ab-b93b-4345-8a43-655697ff36dd&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQifQ%3d%3d",
+	"pageName": "",
+	"bookmarkList": ["Bookmark1d7f5476b91147a87955","Bookmark6a5ec58ce57e4f389ce5"],
+	"sessionRestart":100,
+	"filters": [
+		{
+			"filterTable":"DimProductCategory",
+			"filterColumn":"Product Category",
+			"isSlicer":true,
+			"filtersList":["Accessories","Bikes","Clothing"]
+		},
+		{
+			"filterTable":"DimSalesTerritory",
+			"filterColumn":"SalesTerritoryCountry",
+			"isSlicer":true,
+			"filtersList":[
+				"United States",
+				"France",
+				["Australia","Canada","United Kingdom","United States"],
+				["France","Germany"]
+			]
+		},
+		{
+			"filterTable":"DimDate",
+			"filterColumn":"Quarter",
+			"isSlicer":false,
+			"filtersList":["Q1","Q2","Q3","Q4"]
+		}
+	],
+	"thinkTimeSeconds":1
+ };

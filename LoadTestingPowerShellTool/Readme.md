@@ -1,7 +1,12 @@
 # Power BI Dedicated Capacity Load Assessment Tool
 
-#### ChangleLog
-7/23 Fixed missing JSON issue
+## Load Test Tool Options:  
+- For "worst case scenario" load testing to simulate every user in the company opening the report at the same exact time, use the tool described on this current page.
+- For "realistic user scenario" load testing to simulate a realistic set of user actions such as changing slicers, changing filters, clicking bookmarks, and simulating user "think time" where a user studies the report before clicking again, use the [Realistic Load Test Tool](../RealisticLoadTestTool)
+
+
+#### Change Log
+- 7/23/2019 - Fixed missing JSON issue
 
 ## This package includes:  
 - **Powershell script** (starting point) - Interactively gets inputs from the user and updates the PBIToken and PBIReport files.
@@ -12,7 +17,7 @@
 ### Prereqs:
 - This package requires an elevated PowerShell console to run. (i.e. "Run As Administrator") 
 - This package contains an unsigned PowerShell script. You must first use Set-ExecutionPolicy Unrestricted command in order to allow running of unsigned scripts.
-- This packages requires the Power BI PowerShell modules to be installed. follow [link](https://docs.microsoft.com/en-us/powershell/power-bi/overview?view=powerbi-ps to install modules.
+- This package requires the "MicrosoftPowerBIMgmt" Power BI PowerShell modules to be installed from [here](https://docs.microsoft.com/en-us/powershell/power-bi/overview?view=powerbi-ps).
 
 ### Video Walk Through
 
