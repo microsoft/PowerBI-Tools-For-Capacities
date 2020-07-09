@@ -83,9 +83,17 @@ while($reportCount -gt 0)
 {
     Write-Host "Gathering inputs for report $increment" -ForegroundColor Red
     
-    # Get required inputs from user
+    # Get required inputs from user if the user in china ,use Connect-PowerBIServiceAccount -Environment China 
     Write-Host "Select Id to authenticate to Power BI" -ForegroundColor Yellow
-    Login-PowerBI
+	$response = Read-Host "Are you using chinese Azure?[y/n]"
+	if ( $response -eq 'y' ) 
+	{     
+		Connect-PowerBIServiceAccount -Environment China
+	}
+	if ( $response -eq 'n' ) 
+	{     
+		Login-PowerBI
+	}
 
     #Accessing list of workspaces
     $workSpaceList = Get-PowerBIWorkspace
