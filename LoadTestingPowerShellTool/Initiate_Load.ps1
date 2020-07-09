@@ -83,7 +83,7 @@ while($reportCount -gt 0)
 {
     Write-Host "Gathering inputs for report $increment" -ForegroundColor Red
     
-    # Get required inputs from user if the user in china ,use Connect-PowerBIServiceAccount -Environment China 
+    # Get required inputs from user if the user in china ,use Connect-PowerBIServiceAccount -Environment China . remember to install this in powershell first: Install-Module -Name MicrosoftPowerBIMgmt
     Write-Host "Select Id to authenticate to Power BI" -ForegroundColor Yellow
 	$response = Read-Host "Are you using chinese Azure?[y/n]"
 	if ( $response -eq 'y' ) 
